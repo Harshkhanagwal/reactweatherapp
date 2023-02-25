@@ -15,8 +15,8 @@ const Maintemp = (props) => {
     const tempK = props.ndata?.main.temp;
     const tempC = tempK - 273.15;
     const tempDecimalFix = tempC.toFixed(2);
-  
-    
+
+
     const ftempK = props.ndata?.main.feels_like;
     const ftempC = ftempK - 273.15;
     const ftempDecimalFix = ftempC.toFixed(2);
@@ -29,6 +29,8 @@ const Maintemp = (props) => {
     const maxc = maxk - 273.15;
     const maxf = maxc.toFixed(2);
 
+    const humidity = props.data?.main.humidity;
+    const pressure = props.data?.main.pressure;
 
     return (
         <>
@@ -67,15 +69,15 @@ const Maintemp = (props) => {
                                 </div>
 
                                 <div className="detail-bx">
-                                    <span className="detail-elm">Pressure : {props.data?.main.pressure}</span>
-                                    <span className="detail-elm">Humidity : {props.data?.main.humidity}</span>
+                                    <span className="detail-elm">Pressure : {pressure}</span>
+                                    <span className="detail-elm">Humidity : {humidity}</span>
                                 </div>
 
                             </div>
 
                         </div>
                     </div>
-                                <br />
+                    <br />
                 </div>
             </section>
         </>
