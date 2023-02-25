@@ -67,8 +67,8 @@ const Maintemp = (props) => {
                                 </div>
 
                                 <div className="detail-bx">
-                                    <span className="detail-elm">Pressure : 1020</span>
-                                    <span className="detail-elm">Humidity : 54</span>
+                                    <span className="detail-elm">Pressure : {props.data?.main.pressure}</span>
+                                    <span className="detail-elm">Humidity : {props.data?.main.humidity}</span>
                                 </div>
 
                             </div>
