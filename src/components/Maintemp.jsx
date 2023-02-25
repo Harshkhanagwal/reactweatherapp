@@ -73,21 +73,6 @@ const Maintemp = (props) => {
 
                             </div>
 
-                            <br /><br />
-                            <span className="heading-d">
-                                Wind Status
-                            </span>
-
-                            <div className="details">
-                                <div className="detail-bx">
-                                    <span className="detail-elm">Speed : {props.data?.wind.speed}</span>
-                                </div>
-
-                                <div className="detail-bx">
-                                    <span className="detail-elm">degree : {props.data?.wind.deg}</span>
-                                </div>
-
-                            </div>
                         </div>
                     </div>
                                 <br />
