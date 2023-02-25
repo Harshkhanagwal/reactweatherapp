@@ -28,7 +28,7 @@ const Maintemp = (props) => {
         // sometimes this data is undefined in API - that's why i just used a trick to showcase it 🙂 
     } else {
         const minc = mink - 273.15;
-        const minf = minc.toFixed(2);
+        minf += minc.toFixed(2);
     }
 
     const maxk = Number.parseInt(props.ndata?.main.temp_max);
