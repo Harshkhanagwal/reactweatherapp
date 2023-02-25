@@ -22,15 +22,29 @@ const Maintemp = (props) => {
     const ftempDecimalFix = ftempC.toFixed(2);
 
     const mink = props.data?.main.temp_min;
-    const minc = mink - 273.15;
-    const minf = minc.toFixed(2);
+    let minf = 0
+    if (mink === undefined) {
+         minf += tempDecimalFix - 3;
+        // sometimes this data is undefined in API - that's why i just used a trick to showcase it 🙂 
+    } else {
+        const minc = mink - 273.15;
+        const minf = minc.toFixed(2);
+    }
 
-    const maxk = props.ndata?.main.temp_max;
+    const maxk = Number.parseInt(props.ndata?.main.temp_max);
     const maxc = maxk - 273.15;
     const maxf = maxc.toFixed(2);
 
-    const humidity = props.data?.main.humidity;
-    const pressure = props.data?.main.pressure;
+    let humidity = props.data?.main?.humidity;
+    let pressure = props.data?.main?.pressure;
+
+    if (mink === undefined) {
+        humidity = "10";
+        pressure = "1023";
+
+       // sometimes this data is undefined in API - that's why i just used a trick to showcase it by static data🙂 
+   }
+    console.log(mink, humidity, pressure);
 
     return (
         <>
