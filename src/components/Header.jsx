@@ -8,7 +8,7 @@ const Header = () => {
                 <span className="logo">WeatherApp</span>
             </div>
             <div className="icon-area">
-                <a href="hhttps://github.com/Harshkhanagwal/reactweatherapp">
+                <a href="https://github.com/Harshkhanagwal/reactweatherapp">
                     <img src="/images/git.png" alt="git hub link" />
                 </a>
             </div>
